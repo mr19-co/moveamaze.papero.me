@@ -1,2 +1,0 @@
-(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["game"],{"7d36":function(a,e,n){"use strict";n.r(e);var t=n("7a23"),c=Object(t["C"])("data-v-7a66bb49"),b=c((function(a,e,n,c,b,d){return Object(t["o"])(),Object(t["c"])("div")})),d={name:"Game"};d.render=b,d.__scopeId="data-v-7a66bb49";e["default"]=d}}]);
-//# sourceMappingURL=game.d7ccd944.js.map
