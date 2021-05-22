@@ -32,7 +32,7 @@ const colors = ["green", "red", "violet", "blue"];
 let baseUrl = "https://papero.me";
 const urls = {
     baseUrl: "https://papero.me",
-    socketPath: "/server/cosmos/socket.io",
+    socketPath: "/server/moveamaze/socket.io",
     getLoginInfoUrl: baseUrl+"/user/get_info",
     createLocalAccountUrl: baseUrl+"/auth/local",
     logoutUrl: baseUrl+"/auth/logout",
