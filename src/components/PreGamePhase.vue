@@ -1,15 +1,14 @@
 <template>
   <div class="big-div-pre-game-phase">
-    {{ JSON.stringify(props.lobby) }}
     <div class="players">
       <div
           class="player-and-name-container"
-          v-for="id in Object.keys(state.lobby.players)" :key="id"
+          v-for="id in Object.keys(lobby.players)" :key="id"
       >
         <div
             class="player"
-            :class="'player-' + colors[state.lobby.players[id].color]"
-            :id="id == state.lobby.yourLocalId ? 'player-you' : ''"
+            :class="'player-' + colors[lobby.players[id].color]"
+            :id="id == lobby.yourLocalId ? 'player-you' : ''"
         />
         <div class="name">
           {{ state.lobby.players[id].username }}
@@ -20,7 +19,7 @@
 </template>
 
 <script>
-import { reactive } from "vue";
+import {computed} from "vue";
 
 export default {
   name: "PreGamePhase",
@@ -28,9 +27,7 @@ export default {
     lobby: { required: true }
   },
   setup(props) {
-    const state = reactive({
-      lobby: props.lobby
-    })
+    const lobby = computed(() => props.lobby)
 
     const colors = {
       0: 'blue',
@@ -40,7 +37,7 @@ export default {
     }
 
     return {
-      state,
+      lobby,
       colors
     }
   }
