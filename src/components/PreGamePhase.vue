@@ -1,5 +1,6 @@
 <template>
   <div class="big-div-pre-game-phase">
+    {{ JSON.stringify(props.lobby) }}
     <div class="players">
       <div
           class="player-and-name-container"
