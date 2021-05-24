@@ -56,6 +56,8 @@ export default {
 
     socket.on(websocketEvents.LOBBY_MODIFIED, (lobby) => {
       state.lobby = lobby
+      console.log('lobby modified')
+      console.log(lobby)
     })
 
     function changeColor(color) {
