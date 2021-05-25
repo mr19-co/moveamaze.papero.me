@@ -11,7 +11,7 @@
             :id="id == lobby.yourLocalId ? 'player-you' : ''"
         />
         <div class="name">
-          {{ state.lobby.players[id].username }}
+          {{ lobby.players[id].username }}
         </div>
       </div>
     </div>
