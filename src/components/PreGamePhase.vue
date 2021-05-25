@@ -19,12 +19,16 @@
 </template>
 
 <script>
+import {reactive} from "vue";
+
 export default {
   name: "PreGamePhase",
   props: {
     lobby: { required: true }
   },
   setup() {
+    const state = reactive({})
+
     const colors = {
       0: 'blue',
       1: 'green',
@@ -33,6 +37,7 @@ export default {
     }
 
     return {
+      state,
       colors
     }
   }
