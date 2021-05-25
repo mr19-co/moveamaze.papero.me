@@ -19,16 +19,12 @@
 </template>
 
 <script>
-import {computed} from "vue";
-
 export default {
   name: "PreGamePhase",
   props: {
     lobby: { required: true }
   },
-  setup(props) {
-    const lobby = computed(() => props.lobby)
-
+  setup() {
     const colors = {
       0: 'blue',
       1: 'green',
@@ -37,7 +33,6 @@ export default {
     }
 
     return {
-      lobby,
       colors
     }
   }
