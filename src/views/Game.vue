@@ -3,6 +3,7 @@
     <PreGamePhase
         :lobby="state.lobby"
         v-if="state.lobby.status === 0"
+        @changeColor="changeColor"
     />
     <GamePhase v-if="state.lobby.status === 1"/>
   </div>
@@ -62,6 +63,7 @@ export default {
 
     function changeColor(color) {
       socket.emit(websocketEvents.CHANGE_COLOR, color)
+      console.log('changed to color ' + color)
     }
 
     return {
