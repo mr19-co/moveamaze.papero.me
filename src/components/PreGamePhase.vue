@@ -20,7 +20,7 @@
               class="player"
               :id="'player-' + colors[lobby.players[id].color]"
 
-          />
+          >i</div>
           <div class="name">
             {{ lobby.players[id].username }}
           </div>
@@ -35,7 +35,7 @@
         <div
             class="player"
             :id="'player-' + colors[i]"
-        />
+        >i</div>
         <div class="name">
           {{ isColorAlreadyUsed(i) ? 'Ask to switch colors' : 'Change to this color' }}
         </div>
