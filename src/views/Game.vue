@@ -2,6 +2,7 @@
   <div>
     <PreGamePhase
         :lobby="state.lobby"
+        :socket="socket"
         v-if="state.lobby.status === 0"
         @changeColor="changeColor"
     />
@@ -68,7 +69,8 @@ export default {
 
     return {
       state,
-      changeColor
+      changeColor,
+      socket
     }
   }
 }

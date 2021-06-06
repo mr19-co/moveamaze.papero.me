@@ -47,11 +47,13 @@
 
 <script>
 import {reactive} from "vue";
+import websocketEvents from "../constants/websocketEvents";
 
 export default {
   name: "PreGamePhase",
   props: {
-    lobby: { required: true }
+    lobby: { required: true },
+    socket: { required: true }
   },
   setup(props, context) {
     const state = reactive({
@@ -78,6 +80,10 @@ export default {
     function changeColor(i) {
       context.emit('changeColor', i)
     }
+
+    props.socket.on(websocketEvents.CHANGE_COLOR, () => {
+      state.editing = false
+    })
 
     return {
       state,
